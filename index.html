@@ -3,12 +3,157 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="mediaqueries.css">
 </head>
 <body>
-    
+    <!-- HEADER -->
+     <header class="header">
+        <a href="#" class="logo">Portfolio</a>
+        <i class="fa-solid fa-bars" id="menu-icon"></i>
+        
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#project">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+     </header>
+
+     <!-- HOME -->
+      <section class="home" id="home">
+        <div class="home-content">
+            <h3>Hi, I'm Sanjivani Sharma!</h3>
+            <h3><span class="multiple-text"></span></h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem fugit earum nobis nihil, dicta molestiae ullam quis? Aspernatur doloremque ipsam harum veritatis unde dicta id iusto minima obcaecati iure. Molestiae!</p>
+            <a href="#" class="btn">View CV</a>
+        </div>
+
+        <div class="home-img">
+            <img src="assets/ProfilePic.jpeg" alt="">
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+       <section class="about" id="about">
+        <div class="about-img">
+            <img src="assets/ProfilePic.jpeg" alt="">
+        </div>
+        <div class="about-content">
+            <h2 class="heading">About <span>Me</span></h2>
+            <h3>Frontend Developer</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro labore eius aliquid eveniet vero? Dolor, voluptatum dolorum. Asperiores, ipsa vitae!</p>
+            <a href="#" class="btn">Read More</a>
+        </div>
+       </section>
+
+      <!-- SERVICES -->
+       <section class="services" id="services">
+        <h2 class="heading">My <span>Services</span></h2>
+        <div class="services-container">
+            <div class="services-box">
+                <i class="fa-solid fa-code"></i>
+                <h3>Web Development</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae doloribus eos eligendi atque odio, blanditiis soluta quod, harum, eius deleniti perferendis nisi nemo illum totam.</p>
+                <a href="#" class="btn">Read More</a>
+            </div>
+            <div class="services-box">
+                <i class="fa-solid fa-palette"></i>
+                <h3>UI/UX Designing</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae doloribus eos eligendi atque odio, blanditiis soluta quod, harum, eius deleniti perferendis nisi nemo illum totam.</p>
+                <a href="#" class="btn">Read More</a>
+            </div>
+            <div class="services-box">
+                <i class="fa-brands fa-android"></i>
+                <h3>App Development</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae doloribus eos eligendi atque odio, blanditiis soluta quod, harum, eius deleniti perferendis nisi nemo illum totam.</p>
+                <a href="#" class="btn">Read More</a>
+            </div>
+        </div>
+       </section>
+
+       <!-- PROJECTS -->
+        <section class="project" id="project">
+            <h2 class="heading">Latest <span>Projects</span></h2>
+            <div class="project-container">
+                <div class="project-box">
+                    <img src="assets/code1.jpg" alt="">
+                    <div class="project-layer">
+                        <h4>Web Design</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, beatae!</p>
+                        <i class="fa-solid fa-share-from-square"></i>
+                    </div>
+                </div>
+
+                <div class="project-box">
+                    <img src="assets/code2.jpg" alt="">
+                    <div class="project-layer">
+                        <h4>Web Design</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, beatae!</p>
+                        <i class="fa-solid fa-share-from-square"></i>
+                    </div>
+                </div>
+
+                <div class="project-box">
+                    <img src="assets/code3.jpg" alt="">
+                    <div class="project-layer">
+                        <h4>Web Design</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, beatae!</p>
+                        <i class="fa-solid fa-share-from-square"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+         <section class="contact" id="contact">
+            <h2 class="heading">Contact <span>Me</span></h2>
+            <div class="social-media">
+                <div class="contact-container">
+                    <div class="contact-logo">
+                        <a href="#"></a>
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </div>
+                    <div class="contact-content">
+                        <h1>LinkedIn</h1>
+                        <p>sanjivani-sharma</p>
+                    </div>
+                </div>
+                <div class="contact-container">
+                    <div class="contact-logo">
+                        <i class="fa-solid fa-mobile"></i>
+                    </div>
+                    <div class="contact-content">
+                        <h1>Mobile</h1>
+                        <p>7877362237</p>
+                    </div>
+                </div>
+                <div class="contact-container">
+                    <div class="contact-logo">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <div class="contact-content">
+                        <h1>Email</h1>
+                        <p>sanjivanisharma01@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+         </section>
+
+         <!-- FOOTER -->
+          <footer class="footer">
+            <div class="footer-text">
+                <p>Copyright &copy; 2024 by SanjivaniSharma | All Rights Reserved.</p>
+            </div>
+            <div class="footer-iconTop">
+                <a href="#home"><i class="fa-solid fa-angle-up"></i></a>
+            </div>
+          </footer>
+
+    <!-- JS -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
