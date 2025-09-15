@@ -322,6 +322,7 @@ span {
     background: var(--snd-bg-color);
     padding: 6rem 9%;
     min-height: auto;
+    cursor: pointer;
 }
 
 .project h2 {

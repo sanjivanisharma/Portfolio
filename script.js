@@ -75,3 +75,25 @@ const observer = new IntersectionObserver((entries) => {
 if (skillsSection) {
     observer.observe(skillsSection)
 }
+
+/* ================================= Project card click navigation ================================ */
+const projectCards = document.querySelectorAll('.project-box')
+
+projectCards.forEach(card => {
+    const url = card.getAttribute('data-url')
+    if (!url) return
+
+    card.addEventListener('click', (e) => {
+        // Avoid following clicks that originate from an inner anchor in future
+        if ((e.target && e.target.closest('a'))) return
+        window.open(url, '_blank', 'noopener,noreferrer')
+    })
+
+    // Keyboard accessibility
+    card.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault()
+            window.open(url, '_blank', 'noopener,noreferrer')
+        }
+    })
+})
