@@ -12,8 +12,8 @@
 }
 
 :root {
-    --bg-color: #191f36;
-    --snd-bg-color: #262B40;
+    --bg-color: #000000;
+    --snd-bg-color: #222222;
     --text-color: #fff;
     --main-color: #59B2F4;
 }
@@ -39,7 +39,7 @@ section {
     left: 0;
     width: 100%;
     padding: 2rem 9%;
-    background: var(--bg-color);
+    background: var(--snd-bg-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -92,6 +92,13 @@ span {
 
 .home-img img {
     width: 25vw;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1px solid var(--text-color);
+    margin-left: 10rem;
+    object-fit: cover;
+    object-position: center;
+    object-fit: cover;
 }
 
 .home-content p {
@@ -148,6 +155,7 @@ span {
 
 .services h2 {
     margin-bottom: 5rem;
+    color: var(--text-color);
 }
 
 .services-container {
@@ -164,13 +172,13 @@ span {
     padding: 3rem 2rem 4rem;
     border-radius: 2rem;
     text-align: center;
-    border: .2rem solid var(--bg-color);
-    transition: .5 ease;
+    transition: .5s ease;
+    margin: 1rem;
 }
 
 .services-container .services-box:hover {
-    border-color: var(--main-color);
-    transform: scale(1.02);
+    border: 1px solid var(--text-color);
+    transform: scale(1.05);
 }
 
 .services-box i {
@@ -180,6 +188,7 @@ span {
 
 .services-box h3 {
     font-size: 2.6rem;
+    margin-top: 2rem;
 }
 
 .services-box p {
@@ -187,12 +196,136 @@ span {
     margin: 1rem 0 3rem;
 }
 
+.experience {
+    background: var(--snd-bg-color);
+    min-height: 60vh;
+    padding: 6rem 9% 4rem;
+}
+
+.experience h2 {
+    margin-bottom: 5rem;
+    color: var(--text-color);
+}
+
+.experience-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    width: 100%;
+    max-width: 100rem;
+    margin: 0 auto;
+}
+
+.company-image {
+    flex: 0 0 20rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.company-image img {
+    width: 15rem;
+    height: 15rem;
+    object-fit: contain;
+    border-radius: 1rem;
+    background: #fff;
+    padding: 1.5rem;
+}
+
+.company-details {
+    flex: 1;
+    text-align: left;
+}
+
+.company-details h3 {
+    font-size: 3rem;
+    color: var(--main-color);
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.duration {
+    font-size: 1.8rem;
+    color: #ccc;
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+.description {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+.skills {
+    background: var(--bg-color);
+    min-height: 60vh;
+    padding: 6rem 9% 4rem;
+}
+
+.skills h2 {
+    margin-bottom: 5rem;
+    color: var(--text-color);
+    text-align: center;
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 3rem;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.skill-tab {
+    background: var(--snd-bg-color);
+    padding: 3rem;
+    border-radius: 2rem;
+    text-align: center;
+    transition: .5s ease;
+    border: .2rem solid transparent;
+}
+
+.skill-tab:hover {
+    transform: translateY(-.5rem);
+    border-color: var(--text-color);
+}
+
+.skill-name {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+}
+
+.skill-progress {
+    width: 100%;
+    height: 1rem;
+    background: var(--snd-bg-color);
+    border-radius: 5rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--main-color), #4A90E2);
+    border-radius: 5rem;
+    width: 0%;
+    transition: width 2s ease-in-out;
+    position: relative;
+}
+
+
 .project {
     background: var(--snd-bg-color);
+    padding: 6rem 9%;
+    min-height: auto;
 }
 
 .project h2 {
-    margin-bottom: 4rem;
+    margin-bottom: 2.5rem;
 }
 
 .project-container {
@@ -266,7 +399,8 @@ span {
 }
 
 section.contact {
-    min-height: 70vh;
+    min-height: auto;
+    padding: 6rem 9%;
 }
 
 .social-media {
@@ -308,7 +442,6 @@ section.contact {
 .contact-container .contact-logo:hover {
     background: var(--main-color);
     color: var(--snd-bg-color);
-    box-shadow: 0 0 1rem var(--main-color);
 }
 
 .footer {
@@ -361,11 +494,36 @@ section.contact {
     .services {
         padding: 7rem;
     }
+    .experience {
+        padding: 6rem 3% 4rem;
+        min-height: auto;
+    }
+    .skills {
+        padding: 6rem 3% 4rem;
+        min-height: auto;
+    }
+    .skills-container {
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+        gap: 2rem;
+    }
     .project {
         padding-bottom: 7rem;
     }
     .contact {
         min-height: auto;
+        padding: 6rem 3% 3rem;
+    }
+    .social-media {
+        flex-direction: column;
+        gap: 3rem;
+    }
+    .contact-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    .contact-container .contact-logo {
+        margin: 0 0 1rem 0;
     }
     .footer {
         padding: 2rem 3%;
@@ -424,8 +582,60 @@ section.contact {
     .project h2 {
         margin-bottom: 3rem;
     }
+    .experience h2 {
+        margin-bottom: 3rem;
+    }
+    .skills h2 {
+        margin-bottom: 3rem;
+    }
+    .skills-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .skill-tab {
+        padding: 2rem;
+    }
+    .skill-name {
+        font-size: 2rem;
+    }
+    .experience-content {
+        flex-direction: column;
+        gap: 3rem;
+        text-align: center;
+    }
+    .company-image {
+        flex: none;
+    }
+    .company-image img {
+        width: 12rem;
+        height: 12rem;
+    }
+    .company-details {
+        text-align: center;
+    }
+    .company-details h3 {
+        font-size: 2.5rem;
+    }
+    .duration {
+        font-size: 1.6rem;
+    }
+    .description {
+        font-size: 1.4rem;
+    }
     .project-container {
         grid-template-columns: repeat(2, 1fr);
+    }
+    .contact {
+        padding: 5rem 3% 2rem;
+    }
+    .social-media {
+        gap: 2rem;
+    }
+    .contact-content h1 {
+        font-size: 2.5rem;
+    }
+    .contact-content p {
+        font-size: 1.4rem;
     }
 }
 
@@ -446,5 +656,41 @@ section.contact {
 @media (max-width: 450px) {
     html {
         font-size: 50%;
+    }
+    .contact {
+        padding: 4rem 3% 2rem;
+    }
+    .contact-content h1 {
+        font-size: 2rem;
+    }
+    .contact-content p {
+        font-size: 1.2rem;
+    }
+    .contact-container .contact-logo {
+        width: 3.5rem;
+        height: 3.5rem;
+        font-size: 1.8rem;
+    }
+    .experience-content {
+        gap: 2rem;
+    }
+    .company-image img {
+        width: 10rem;
+        height: 10rem;
+    }
+    .company-details h3 {
+        font-size: 2rem;
+    }
+    .duration {
+        font-size: 1.4rem;
+    }
+    .description {
+        font-size: 1.2rem;
+    }
+    .skill-tab {
+        padding: 1.5rem;
+    }
+    .skill-name {
+        font-size: 1.8rem;
     }
 }

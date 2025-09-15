@@ -10,10 +10,11 @@ menuIcon.onclick = () => {
 
 /* ================================= Scroll section active link ================================ */
 
-let sections = document.querySelectorAll('.section')
+let sections = document.querySelectorAll('section')
 let navLinks = document.querySelectorAll('header nav a')
 
 window.onscroll = () => {
+    let current = ''
     sections.forEach(sec => {
         let top = window.scrollY
         let offset = sec.offsetTop - 150
@@ -21,10 +22,14 @@ window.onscroll = () => {
         let id = sec.getAttribute('id')
 
         if(top >= offset && top < offset + height) {
-            navLinks.forEach.apply(links => {
-                links.classList.remove('active')
-                document.querySelector('header nav a[href*=' + id + ']').classList.add('active')
-            })
+            current = id
+        }
+    })
+
+    navLinks.forEach(link => {
+        link.classList.remove('active')
+        if(link.getAttribute('href').includes(current)) {
+            link.classList.add('active')
         }
     })
 
@@ -39,9 +44,34 @@ window.onscroll = () => {
 
 /* ================================= Typed JS ================================ */
 const typed = new Typed('.multiple-text', {
-    strings: ['Software Developer', 'Web Designer', 'Coder'],
+    strings: ['Software Developer', 'Web Developer', 'Coder'],
     typeSpeed: 70,
     backSpeed: 90,
     backDelay: 1000,
     loop: true
 })
+
+/* ================================= Skills Progress Animation ================================ */
+const progressBars = document.querySelectorAll('.progress-bar')
+
+const animateProgressBars = () => {
+    progressBars.forEach(bar => {
+        const width = bar.getAttribute('data-width')
+        bar.style.width = width
+    })
+}
+
+// Animate progress bars when skills section is in view
+const skillsSection = document.querySelector('.skills')
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            animateProgressBars()
+            observer.unobserve(entry.target)
+        }
+    })
+}, { threshold: 0.5 })
+
+if (skillsSection) {
+    observer.observe(skillsSection)
+}

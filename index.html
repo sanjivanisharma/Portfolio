@@ -3,20 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- HEADER -->
      <header class="header">
-        <a href="#" class="logo">Portfolio</a>
+        <a href="#" class="logo">Developer</a>
         <i class="fa-solid fa-bars" id="menu-icon"></i>
         
         <nav class="navbar">
             <a href="#home" class="active">Home</a>
-            <a href="#about">About</a>
             <a href="#services">Services</a>
+            <a href="#experience">Experience</a>
+            <a href="#skills">Skills</a>
             <a href="#project">Projects</a>
             <a href="#contact">Contact</a>
         </nav>
@@ -27,27 +28,15 @@
         <div class="home-content">
             <h3>Hi, I'm Sanjivani Sharma!</h3>
             <h3><span class="multiple-text"></span></h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem fugit earum nobis nihil, dicta molestiae ullam quis? Aspernatur doloremque ipsam harum veritatis unde dicta id iusto minima obcaecati iure. Molestiae!</p>
-            <a href="#" class="btn">View CV</a>
+            <p>Passionate about exploring new technologies and continuously improving skills to create innovative, creative solutions. Collaborating to create meaningful applications with user needs at the center of every design.</p>
+            <a href="https://drive.google.com/file/d/1vwD9obQtKGBShREMz9ThQ6dnjgpVaq-h/view?usp=sharing" class="btn">View CV</a>
         </div>
 
         <div class="home-img">
-            <img src="assets/ProfilePic.jpeg" alt="">
+            <img src="assets/profilePic.jpg" alt="">
         </div>
       </section>
 
-      <!-- ABOUT -->
-       <section class="about" id="about">
-        <div class="about-img">
-            <img src="assets/ProfilePic.jpeg" alt="">
-        </div>
-        <div class="about-content">
-            <h2 class="heading">About <span>Me</span></h2>
-            <h3>Frontend Developer</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro labore eius aliquid eveniet vero? Dolor, voluptatum dolorum. Asperiores, ipsa vitae!</p>
-            <a href="#" class="btn">Read More</a>
-        </div>
-       </section>
 
       <!-- SERVICES -->
        <section class="services" id="services">
@@ -55,21 +44,88 @@
         <div class="services-container">
             <div class="services-box">
                 <i class="fa-solid fa-code"></i>
-                <h3>Web Development</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae doloribus eos eligendi atque odio, blanditiis soluta quod, harum, eius deleniti perferendis nisi nemo illum totam.</p>
-                <a href="#" class="btn">Read More</a>
+                <h3>Frontend Development</h3>
+                <p>Building fast, responsive, and accessible UIs with React and Angular. I use modern CSS, and component-driven architecture to deliver intuitive layouts, and great performance across devices and browsers.</p>
             </div>
             <div class="services-box">
-                <i class="fa-solid fa-palette"></i>
-                <h3>UI/UX Designing</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae doloribus eos eligendi atque odio, blanditiis soluta quod, harum, eius deleniti perferendis nisi nemo illum totam.</p>
-                <a href="#" class="btn">Read More</a>
+                <i class="fa-solid fa-server"></i>
+                <h3>Backend Development</h3>
+                <p>Designing and building secure, scalable APIs with Node.js and Express. I implement authentication/authorization, write robust business logic, and ensure secure data handling.</p>
             </div>
             <div class="services-box">
-                <i class="fa-brands fa-android"></i>
-                <h3>App Development</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae doloribus eos eligendi atque odio, blanditiis soluta quod, harum, eius deleniti perferendis nisi nemo illum totam.</p>
-                <a href="#" class="btn">Read More</a>
+                <i class="fa-solid fa-laptop-code"></i>
+                <h3>Full Stack Development</h3>
+                <p>Delivering end-to-end web apps—from UX to launch. I connect responsive frontends with clean REST APIs, integrate databases, and manage state and performance for reliable, scalable applications.</p>
+            </div>
+        </div>
+       </section>
+
+       <!-- EXPERIENCE -->
+       <section class="experience" id="experience">
+        <h2 class="heading">My <span>Experience</span></h2>
+        <div class="experience-content">
+            <div class="company-image">
+                <img src="assets/robomq-logo.jpg" alt="RoboMQ Logo">
+            </div>
+            <div class="company-details">
+                <h3>RoboMQ</h3>
+                <p class="duration">2023-2024</p>
+                <p class="description">Worked as an Associate Software Engineer at RoboMQ, contributing to their product Hire2Retire and gaining valuable experience in modern web technologies and software engineering practices.</p>
+            </div>
+        </div>
+       </section>
+
+       <!-- SKILLS -->
+       <section class="skills" id="skills">
+        <h2 class="heading">My <span>Skills</span></h2>
+        <div class="skills-container">
+            <div class="skill-tab">
+                <div class="skill-name">React</div>
+                <div class="skill-progress">
+                    <div class="progress-bar" data-width="75%"></div>
+                </div>
+            </div>
+            <div class="skill-tab">
+                <div class="skill-name">Angular</div>
+                <div class="skill-progress">
+                    <div class="progress-bar" data-width="80%"></div>
+                </div>
+            </div>
+            <div class="skill-tab">
+                <div class="skill-name">Node.js</div>
+                <div class="skill-progress">
+                    <div class="progress-bar" data-width="80%"></div>
+                </div>
+            </div>
+            <div class="skill-tab">
+                <div class="skill-name">Java</div>
+                <div class="skill-progress">
+                    <div class="progress-bar" data-width="80%"></div>
+                </div>
+            </div>
+            <div class="skill-tab">
+                <div class="skill-name">JavaScript</div>
+                <div class="skill-progress">
+                    <div class="progress-bar" data-width="85%"></div>
+                </div>
+            </div>
+            <div class="skill-tab">
+                <div class="skill-name">TypeScript</div>
+                <div class="skill-progress">
+                    <div class="progress-bar" data-width="80%"></div>
+                </div>
+            </div>
+            <div class="skill-tab">
+                <div class="skill-name">SQL</div>
+                <div class="skill-progress">
+                    <div class="progress-bar" data-width="85%"></div>
+                </div>
+            </div>
+            <div class="skill-tab">
+                <div class="skill-name">MongoDB</div>
+                <div class="skill-progress">
+                    <div class="progress-bar" data-width="70%"></div>
+                </div>
             </div>
         </div>
        </section>
@@ -79,28 +135,28 @@
             <h2 class="heading">Latest <span>Projects</span></h2>
             <div class="project-container">
                 <div class="project-box">
-                    <img src="assets/code1.jpg" alt="">
+                    <img src="assets/code1.jpg" alt="Blog Application">
                     <div class="project-layer">
-                        <h4>Web Design</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, beatae!</p>
+                        <h4>Blog Application</h4>
+                        <p>Blog platform built with React and Appwrite, featuring CRUD posts, auth, and responsive UI.</p>
                         <i class="fa-solid fa-share-from-square"></i>
                     </div>
                 </div>
 
                 <div class="project-box">
-                    <img src="assets/code2.jpg" alt="">
+                    <img src="assets/code2.jpg" alt="To‑Do Application">
                     <div class="project-layer">
-                        <h4>Web Design</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, beatae!</p>
+                        <h4>To‑Do Application</h4>
+                        <p>Full‑stack app using Angular, Node, and MySQL with tasks, filters, and JWT auth.</p>
                         <i class="fa-solid fa-share-from-square"></i>
                     </div>
                 </div>
 
                 <div class="project-box">
-                    <img src="assets/code3.jpg" alt="">
+                    <img src="assets/code3.jpg" alt="Course Management System">
                     <div class="project-layer">
-                        <h4>Web Design</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, beatae!</p>
+                        <h4>Course Management System</h4>
+                        <p>Java + MySQL system to manage courses, enrollments, and instructor workflows.</p>
                         <i class="fa-solid fa-share-from-square"></i>
                     </div>
                 </div>
